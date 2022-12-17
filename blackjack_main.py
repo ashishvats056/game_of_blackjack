@@ -20,7 +20,7 @@ player = []
 
 def new_game():
     """
-    Clear the screen, start a new game, and
+    Clear the screen, start a new game, print the logo, and
     Deal two cards each to dealer (computer) and player.
     """
     pyautogui.hotkey('ctrl', 'tab', 'c')
