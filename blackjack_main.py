@@ -88,6 +88,7 @@ while True:
     play_game = input("Do you want to play a game of BlackJack? Type 'y' or 'n': ")
     if play_game == 'y':
         new_game()
+        game_over = False
 
         if check_blackjack(dealer):
             final_score()
@@ -106,9 +107,12 @@ while True:
                 if went_over(player):
                     final_score()
                     print("You went over. You lose 😤")
+                    game_over = True
                     break
             else:
                 break
+        if game_over:
+            continue
 
         while sum(dealer) < 17:
             dealer.append(deal_card())
