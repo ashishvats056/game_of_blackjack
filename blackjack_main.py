@@ -118,6 +118,10 @@ while True:
             dealer.append(deal_card())
             if went_over(dealer):
                 print("Opponent went over. You win 😁")
+                game_over = True
+                break
+        if game_over:
+            continue
 
         calculate_score()
     else:
